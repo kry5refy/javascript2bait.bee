@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript">
+        
+        function Router(rodzaj, producent, model) {
+            this.rodzaj = rodzaj;
+            this.producent = producent;
+            this.model = model;
+        }
+
+        
+        Router.prototype.Router_wyswietl_rainski = function () {
+            document.write('Rodzaj: ' + this.rodzaj + '<br>');
+            document.write('Producent: ' + this.producent + '<br>');
+            document.write('Model: ' + this.model + '<br>');
+        };
+
+        
+        var router1 = new Router('Bezprzewodowy', 'TP-Link', 'Archer C7');
+        var router2 = new Router('Przewodowy', 'Cisco', 'RV340');
+        var router3 = new Router('Bezprzewodowy', 'Netgear', 'Nighthawk');
+
+        
+        function showTask() {
+            router1.Router_wyswietl_rainski();
+            router2.Router_wyswietl_rainski();
+            router3.Router_wyswietl_rainski();
+
+        }
+
+        Router.prototype.czestotliwosc_pracy = "2.4 / 5 GHz (DualBand)";
+
+        
+        Router.prototype.router_pokaz_rainski = function () {
+            alert('Częstotliwosc pracy: ' + this.czestotliwosc_pracy);
+        };
+        showTask();
+        router1.router_pokaz_rainski();
+    </script>
+</head>
+
+<body>
+    <p>Programowanie Obiektowe</p>
+</body>
+
+</html>

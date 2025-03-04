@@ -1,0 +1,38 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zadanie 25</title>
+</head>
+
+<body>
+
+  <div style="color: blue; font-size: 50px;">
+
+    <script>
+      var n_rai = parseFloat(prompt("N0= ", "sztuki"));
+      var t_rai = parseFloat(prompt("T= ", "lata"));
+      var t1t2_rai = parseFloat(prompt("T1/2=", "lata"));
+
+      function lambda(t1t2_rai) {
+        return (Math.log(2)) / t1t2_rai;
+      }
+
+      function euler(t_rai, n_rai) {
+        let potega = -t_rai * lambda(t1t2_rai);
+        let e = Math.pow(Math.E, potega);
+        return n_rai * e;
+      }
+
+      document.write("N0 = " + n_rai + " (sztuk) <br>");
+      document.write("t = " + t_rai + " (lat) <br>");
+      document.write("T1/2 = " + t1t2_rai + " (lat) <br>");
+      document.write("Lambda = " + lambda(t1t2_rai).toFixed(7) + " (1/rok) <br>");
+      document.write("N = " + euler(t_rai, n_rai).toFixed(7) + " (sztuk) ");
+
+    </script>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript">
+        var Router = {
+            rodzaj: 'Bezprzewodowy',
+            producent: 'TP-Link',
+            model: 'Archer C7',
+            Router_wyswietl_rainski: function () {
+                document.write('Rodzaj: ' + this.rodzaj + '<br>');
+                document.write('Producent: ' + this.producent + '<br>');
+                document.write('Model: ' + this.model + '<br>');
+            }
+        }
+        Router.Router_wyswietl_rainski()
+        Router.czestotliwosc_pracy = "2.4 / 5 GHz(DualBand)";
+        Router.router_pokaz_rainski = function () { alert('Częstotliwosc pracy: ' + this.czestotliwosc_pracy) }
+    </script>
+</head>
+
+<body>
+    <br>
+    Programowanie obiektowe. <br>
+    Obiekt to Router<br>
+    Pola:<br>
+    Rodzaj<br>
+    Producent<br>
+    Model<br>
+    Metoda: Router_wyswietl_rainski<br>
+    nowe pole to czestotliwosc pracy<br>
+    nowa metoda to router_pokaz_rainski();<br>
+    <button onclick="Router.router_pokaz_rainski()">Pokaż częstotliwość pracy</button>
+</body>
+
+</html>

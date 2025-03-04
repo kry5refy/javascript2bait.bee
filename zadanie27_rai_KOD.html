@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function okno_zamknij_rainski() {
+            window.close()
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <textarea name="rainski" cols="120" rows="29" readonly>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Obliczenia lotu samolotu</title>
+    <script>
+        function wysokosc_kowalski(odl_kow, s_kow) {
+            odl_kow = parseFloat(odl_kow);
+            s_kow = parseFloat(s_kow);
+            let h_kow = Math.sqrt(Math.pow(s_kow, 2) - Math.pow(odl_kow, 2));
+            document.getElementsByName('wysokosc')[0].value = h_kow.toFixed(2);
+        }
+
+        function kat_startu_kowalski(odl_kow, s_kow) {
+            odl_kow = parseFloat(odl_kow);
+            s_kow = parseFloat(s_kow);
+            let kat_kow = Math.asin(odl_kow / s_kow) * (180 / Math.PI);
+            document.getElementsByName('kat')[0].value = kat_kow.toFixed(2);
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <p>Artur i Dawid stoją w odległości <b>odl_kow</b>. Artur jest na lotnisku, z którego startuje samolot pod kątem
+            <b>kat_kow</b>. Gdy samolot znajduje się pionowo nad Dawidem, przebył drogę <b>s_kow</b>. Oblicz wysokość
+            <b>h_kow</b> oraz kąt startu.
+        </p>
+        <form
+            onsubmit="wysokosc_kowalski(this.odl_kow.value, this.s_kow.value); kat_startu_kowalski(this.odl_kow.value, this.s_kow.value); return false;">
+            <label>Podaj odległość Dawida od lotniska (odl_kow):</label>
+            <input type="text" name="odl_kow" size="6"> <br><br>
+
+            <label>Podaj przebytą drogę samolotu (s_kow):</label>
+            <input type="text" name="s_kow" size="6"> <br><br>
+
+            <input type="submit" value="Oblicz"> <br><br>
+
+            <label>Wysokość samolotu (h_kow):</label>
+            <input type="text" name="wysokosc" size="6" readonly> <br><br>
+
+            <label>Kąt startu samolotu (kat_kow):</label>
+            <input type="text" name="kat" size="6" readonly> <br><br>
+        </form>
+    </center>
+</body>
+
+</html>
+</textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_rainski()" />
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 22</title>
+    <script>
+        function Pole_rainski(a_rai, b_rai) {
+            var pole = a_rai * b_rai;
+            document.getElementById('wyprowadz_pole_rai').value = pole.toFixed(2) + " cm²";
+        }
+
+        function obwod_rainski(a_rai, b_rai) {
+            var obwod = 2 * (a_rai + b_rai);
+            document.getElementById('wyprowadz_obwod_rai').value = obwod.toFixed(2) + " cm";
+        }
+
+        function oblicz() {
+            var a_rai = parseFloat(document.getElementById('a_dana_rai').value);
+            var b_rai = parseFloat(document.getElementById('b_dana_rai').value);
+            Pole_rainski(a_rai, b_rai);
+            obwod_rainski(a_rai, b_rai);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Oblicz pole i obwód prostokąta</h1>
+    <input type="number" id="a_dana_rai" placeholder="a"> a cm<br>
+    <input type="number" id="b_dana_rai" placeholder="b"> b cm<br>
+    <input type="button" value="Oblicz" onclick="oblicz()"><br><br>
+    <label for="wyprowadz_pole_rai">Pole: </label>
+    <input type="text" id="wyprowadz_pole_rai" readonly><br>
+    <label for="wyprowadz_obwod_rai">Obwód: </label>
+    <input type="text" id="wyprowadz_obwod_rai" readonly><br>
+</body>
+
+</html>

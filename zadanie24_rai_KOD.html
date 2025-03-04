@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function okno_zamknij_rainski() {
+            window.close()
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <textarea name="rainski" cols="120" rows="29" readonly>
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 24</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #wynik {
+            margin-top: 20px;
+            white-space: pre-line;
+            background: lightgray;
+            padding: 10px;
+            color: blue;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wynik"></div>
+
+    <script>
+        let x1_rai = parseFloat(prompt("Podaj x1 w stopniach:"));
+        let x2_rai = parseFloat(prompt("Podaj x2:"));
+
+        let wynikDiv = document.getElementById("wynik");
+        wynikDiv.innerHTML = `x1 = ${x1_rai} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x2 = ${x2_rai} <br>`;
+        wynikDiv.innerHTML += `x1 = ${x1_rai} &nbsp;&nbsp;&nbsp; x1 = ${(x1_rai * Math.PI / 180).toFixed(2)}<br>`;
+
+
+        let x1_radiany = (x1_rai * Math.PI) / 180;
+    </script>
+</body>
+
+</html>
+</textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_rainski()" />
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>

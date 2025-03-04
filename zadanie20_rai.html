@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 20</title>
+    <script>
+        function AB_rai() {
+            var xa = parseFloat(document.getElementById('xa_rai').value);
+            var xb = parseFloat(document.getElementById('xb_rai').value);
+            var ya = parseFloat(document.getElementById('ya_rai').value);
+            var yb = parseFloat(document.getElementById('yb_rai').value);
+            var dlugoscAB = Math.sqrt(Math.pow(xa - xb, 2) + Math.pow(ya - yb, 2));
+            document.getElementById('dlugoscAB').innerText = "Długość AB: " + dlugoscAB.toFixed(2) + " cm";
+        }
+
+        function BC_rai() {
+            var xb = parseFloat(document.getElementById('xb_rai').value);
+            var xc = parseFloat(document.getElementById('xc_rai').value);
+            var yb = parseFloat(document.getElementById('yb_rai').value);
+            var yc = parseFloat(document.getElementById('yc_rai').value);
+            var dlugoscBC = Math.sqrt(Math.pow(xb - xc, 2) + Math.pow(yb - yc, 2));
+            document.getElementById('dlugoscBC').innerText = "Długość BC: " + dlugoscBC.toFixed(2) + " cm";
+        }
+
+        function AC_rai() {
+            var xa = parseFloat(document.getElementById('xa_rai').value);
+            var xc = parseFloat(document.getElementById('xc_rai').value);
+            var ya = parseFloat(document.getElementById('ya_rai').value);
+            var yc = parseFloat(document.getElementById('yc_rai').value);
+            var dlugoscAC = Math.sqrt(Math.pow(xa - xc, 2) + Math.pow(ya - yc, 2));
+            document.getElementById('dlugoscAC').innerText = "Długość AC: " + dlugoscAC.toFixed(2) + " cm";
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Oblicz długości boków trójkąta</h1>
+    <input type="number" id="xa_rai" placeholder="xa"> xa cm<br>
+    <input type="number" id="ya_rai" placeholder="ya"> ya cm<br>
+    <input type="number" id="xb_rai" placeholder="xb"> xb cm<br>
+    <input type="number" id="yb_rai" placeholder="yb"> yb cm<br>
+    <input type="number" id="xc_rai" placeholder="xc"> xc cm<br>
+    <input type="number" id="yc_rai" placeholder="yc"> yc cm<br>
+    <input type="button" value="Oblicz długości boków" onclick="AB_rai(); BC_rai(); AC_rai();"><br><br>
+    <div id="dlugoscAB"></div>
+    <div id="dlugoscBC"></div>
+    <div id="dlugoscAC"></div>
+</body>
+
+</html>
