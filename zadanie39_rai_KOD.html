@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function okno_zamknij_rainski() {
+            window.close()
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <textarea name="rainski" cols="120" rows="29" readonly>
+            <!DOCTYPE html>
+            <html lang="pl">
+            
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Zadanie 39 </title>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        text-align: center;
+                    }
+            
+                    .menu {
+                        margin: 20px;
+                    }
+            
+                    .menu h2 {
+                        color: green;
+                    }
+            
+                    .menu button {
+                        margin: 10px;
+                        padding: 10px 20px;
+                        font-size: 16px;
+                    }
+            
+                    .color-text {
+                        font-size: 24px;
+                        font-weight: bold;
+                    }
+            
+                    .red {
+                        color: red;
+                    }
+            
+                    .blue {
+                        color: blue;
+                    }
+                </style>
+            </head>
+            
+            <body>
+                <div class="menu">
+                    <h2>MENU:</h2>
+                    <p class="color-text red">1 - czerwony</p>
+                    <p class="color-text blue">2 - niebieski</p>
+                    <input id="kolor" placeholder="Podaj kolor :"> <br>
+                    <button onclick="fun_rai()">Sprawdź</button>
+                </div>
+            
+                <div id="Oblicz"></div>
+            
+                <script>
+                    function fun_rai() {
+                        var opcja_dana_rai = document.getElementById("kolor").value.toLowerCase();
+                        var oblicz = document.getElementById("Oblicz");
+            
+                        if (opcja_dana_rai == 1 || opcja_dana_rai == "czerwony") {
+                            oblicz.innerHTML = '<p class="color-text red">1 - wczytałeś kolor czerwony</p>';
+                        } else if (opcja_dana_rai == 2 || opcja_dana_rai == "niebieski") {
+                            oblicz.innerHTML = '<p class="color-text blue">2 - wczytałeś kolor niebieski</p>';
+                        } else {
+                            alert("Nieprawidłowy kolor!");
+                        }
+                    }
+                </script>
+            </body>
+            
+            </html>
+</textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_rainski()" />
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>
